@@ -19,7 +19,7 @@
 
 .audience-tile:hover {
   box-shadow: var(--shadow-md);
-  border-color: #CBD5E1;
+  border-color: var(--color-primary);
 }
 
 .audience-tile__icon {

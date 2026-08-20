@@ -11,12 +11,15 @@
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(30px, 3.6vw, 42px);
-  color: var(--color-text);
+  background: linear-gradient(135deg, #FDBA74, #F97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .stat-card__label {
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--color-text-inverse-muted);
   letter-spacing: 0.02em;
 }

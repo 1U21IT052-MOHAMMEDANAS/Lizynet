@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   background: var(--color-primary-tint);
-  border: 1px solid #E0E7FF;
+  border: 1px solid #FFD9B3;
   color: var(--color-primary);
   flex-shrink: 0;
 }

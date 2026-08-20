@@ -1,7 +1,25 @@
 .programs-section {
-  background: var(--color-bg-alt);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  background: var(--color-bg-dark);
+  overflow: hidden;
+}
+
+.programs-section__glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.16;
+  filter: blur(120px);
+  top: -200px;
+  right: -120px;
+  pointer-events: none;
+}
+
+.programs-section > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .programs-section__grid {
