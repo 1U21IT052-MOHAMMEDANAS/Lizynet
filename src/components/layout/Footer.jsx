@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Network } from 'lucide-react'
 import { footerLinks } from '../../data/nav.js'
 import SocialIcon from '../ui/SocialIcon.jsx'
+import Logo from '../ui/Logo.jsx'
 import './Footer.css'
 
 export default function Footer() {
@@ -12,9 +12,7 @@ export default function Footer() {
       <div className="container footer__top">
         <div className="footer__brand-col">
           <Link to="/" className="footer__brand">
-            <span className="footer__logo">
-              <Network size={20} strokeWidth={2.2} />
-            </span>
+            <Logo size={30} onDark className="footer__logo" />
             LizyNet
           </Link>
           <p className="footer__tagline">One network. Everything Lizy.</p>

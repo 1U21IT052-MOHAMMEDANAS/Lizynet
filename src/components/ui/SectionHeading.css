@@ -27,6 +27,14 @@
   font-size: 16.5px;
 }
 
+.section-heading--dark .section-heading__title {
+  color: var(--color-text-inverse);
+}
+
+.section-heading--dark .section-heading__desc {
+  color: var(--color-text-inverse-muted);
+}
+
 .section-heading__action {
   flex-shrink: 0;
 }

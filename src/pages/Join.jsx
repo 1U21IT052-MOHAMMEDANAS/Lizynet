@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Network, CheckCircle2 } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 import Button from '../components/ui/Button.jsx'
+import Logo from '../components/ui/Logo.jsx'
 import './Auth.css'
 
 const roles = ['Customer', 'Business', 'Seller', 'Service Provider', 'Affiliate', 'Delivery Partner']
@@ -19,7 +20,7 @@ export default function Join() {
       <div className="auth-page__panel">
         <div className="auth-page__brand">
           <span className="auth-page__logo">
-            <Network size={20} strokeWidth={2.2} />
+            <Logo size={22} onDark />
           </span>
           LizyNet
         </div>

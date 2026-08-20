@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Network } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navLinks } from '../../data/nav.js'
 import Button from '../ui/Button.jsx'
+import Logo from '../ui/Logo.jsx'
 import './Header.css'
 
 export default function Header() {
@@ -34,9 +35,7 @@ export default function Header() {
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__inner">
         <Link to="/" className="header__brand">
-          <span className="header__logo">
-            <Network size={20} strokeWidth={2.2} />
-          </span>
+          <Logo size={32} className="header__logo" />
           LizyNet
         </Link>
 

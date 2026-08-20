@@ -1,5 +1,5 @@
 .how-it-works {
-  background: var(--color-bg);
+  background: var(--color-bg-alt);
 }
 
 .how-it-works__flow {
@@ -27,9 +27,14 @@
   align-items: center;
   justify-content: center;
   background: var(--color-primary-tint);
-  border: 1px solid #E0E7FF;
+  border: 1px solid #FFD9B3;
   color: var(--color-primary);
   margin-bottom: 16px;
+  transition: transform 0.25s ease;
+}
+
+.how-it-works__step:hover .how-it-works__node {
+  transform: scale(1.08) rotate(-3deg);
 }
 
 .how-it-works__label {
