@@ -1,0 +1,53 @@
+.cta-section {
+  position: relative;
+  background: var(--color-primary);
+  padding: 80px 0;
+}
+
+.cta-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.cta-section__title {
+  font-size: clamp(28px, 3.6vw, 42px);
+  color: #fff;
+  max-width: 620px;
+}
+
+.cta-section__desc {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+}
+
+.cta-section__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-section .btn--primary {
+  background: #fff;
+  color: var(--color-primary);
+}
+
+.cta-section .btn--primary:hover {
+  background: #F1F5F9;
+}
+
+.cta-section .btn--secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.cta-section .btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+}

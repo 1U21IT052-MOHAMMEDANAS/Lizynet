@@ -1,0 +1,19 @@
+.product-page__rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14.5px;
+}
+
+.product-page__rating strong {
+  font-size: 15px;
+}
+
+.product-page__rating span {
+  color: var(--color-text-muted);
+}
+
+.product-page__cta {
+  width: 100%;
+  justify-content: center;
+}

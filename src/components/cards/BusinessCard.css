@@ -1,0 +1,90 @@
+.business-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+}
+
+a.business-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #CBD5E1;
+}
+
+.business-card--soon {
+  opacity: 0.72;
+}
+
+.business-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.business-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.business-card__icon--indigo { background: #EEF2FF; color: #4338CA; }
+.business-card__icon--amber { background: #FFFBEB; color: #B45309; }
+.business-card__icon--teal { background: #F0FDFA; color: #0F766E; }
+.business-card__icon--violet { background: #F5F3FF; color: #6D28D9; }
+.business-card__icon--blue { background: #EFF6FF; color: #1D4ED8; }
+.business-card__icon--rose { background: #FFF1F2; color: #BE123C; }
+.business-card__icon--emerald { background: #ECFDF5; color: #047857; }
+.business-card__icon--orange { background: #FFF7ED; color: #C2410C; }
+
+.business-card__arrow {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a.business-card:hover .business-card__arrow {
+  color: var(--color-primary);
+  transform: translate(2px, -2px);
+}
+
+.business-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.business-card__name {
+  font-size: 19px;
+}
+
+.business-card__tagline {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.business-card__desc {
+  font-size: 14.5px;
+  margin-top: 4px;
+}
+
+.business-card__foot {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.business-card__category {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
