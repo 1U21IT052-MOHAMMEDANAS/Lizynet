@@ -1,11 +1,14 @@
-import { ArrowRight, Handshake, ShoppingBag, Wrench, Building2, Sparkles } from 'lucide-react'
+import { ArrowRight, ChevronDown, Handshake, ShoppingBag, Wrench, Building2, Sparkles } from 'lucide-react'
 import Button from '../ui/Button.jsx'
 import './Hero.css'
 
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero__grid-bg" aria-hidden="true" />
+      <div className="stars-sm" aria-hidden="true" />
+      <div className="stars-lg" aria-hidden="true" />
+      <div className="hero__nebula hero__nebula--1" aria-hidden="true" />
+      <div className="hero__nebula hero__nebula--2" aria-hidden="true" />
 
       <div className="container hero__inner">
         <div className="hero__content">
@@ -29,13 +32,22 @@ export default function Hero() {
             <Button href="/#businesses" variant="primary" size="lg" icon={ArrowRight}>
               Explore Lizy
             </Button>
-            <Button to="/join" variant="secondary" size="lg">
+            <Button to="/join" variant="ghost" size="lg">
               Become a Partner
             </Button>
           </div>
         </div>
 
         <div className="hero__visual" aria-hidden="true">
+          <svg className="hero__orbit hero__orbit--1" viewBox="0 0 420 420">
+            <circle cx="210" cy="210" r="204" stroke="rgba(249,115,22,0.28)" strokeWidth="1" strokeDasharray="2 9" />
+            <circle cx="414" cy="210" r="3.4" fill="#FDBA74" />
+          </svg>
+          <svg className="hero__orbit hero__orbit--2" viewBox="0 0 420 420">
+            <circle cx="210" cy="210" r="168" stroke="rgba(255,255,255,0.14)" strokeWidth="1" strokeDasharray="1 7" />
+            <circle cx="42" cy="210" r="2.6" fill="#fff" />
+          </svg>
+
           <div className="hero__panel">
             <div className="hero__panel-head">
               <span className="hero__panel-dot" />
@@ -76,6 +88,10 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <a href="#businesses" className="hero__scroll-cue" aria-label="Scroll to explore">
+        <ChevronDown size={20} strokeWidth={2} />
+      </a>
     </section>
   )
 }

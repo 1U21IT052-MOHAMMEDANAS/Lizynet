@@ -1,9 +1,13 @@
 .stats-section {
+  position: relative;
   background: var(--color-bg-dark);
   padding: 60px 0;
+  overflow: hidden;
 }
 
 .stats-section__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }

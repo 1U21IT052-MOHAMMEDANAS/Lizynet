@@ -9,6 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="footer">
+      <div className="stars-sm" aria-hidden="true" />
       <div className="container footer__top">
         <div className="footer__brand-col">
           <Link to="/" className="footer__brand">

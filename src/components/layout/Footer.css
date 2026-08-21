@@ -1,10 +1,14 @@
 .footer {
+  position: relative;
   background: var(--color-bg-dark);
   color: var(--color-text-inverse-muted);
   padding-top: 80px;
+  overflow: hidden;
 }
 
 .footer__top {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.6fr repeat(4, 1fr);
   gap: 40px;
@@ -92,6 +96,8 @@
 }
 
 .footer__bottom {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;

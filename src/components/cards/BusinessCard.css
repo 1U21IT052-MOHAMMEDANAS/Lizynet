@@ -40,6 +40,19 @@ a.business-card:hover .business-card__icon {
   transform: scale(1.08) rotate(-3deg);
 }
 
+.business-card__logo {
+  height: 52px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform 0.25s ease;
+}
+
+a.business-card:hover .business-card__logo {
+  transform: scale(1.05);
+}
+
 .business-card__icon--indigo { background: #171717; color: #fff; }
 .business-card__icon--amber { background: var(--color-primary-tint); color: var(--color-primary-dark); }
 .business-card__icon--teal { background: #F0F0F0; color: #171717; }
