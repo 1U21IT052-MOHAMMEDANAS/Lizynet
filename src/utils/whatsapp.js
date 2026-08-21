@@ -16,10 +16,6 @@ export function openWhatsApp(number, message) {
   window.open(buildWhatsAppUrl(number, message), '_blank', 'noopener,noreferrer')
 }
 
-export function serviceInquiryMessage(serviceName) {
-  return `Hi, I'm interested in your "${serviceName}" service.`
-}
-
 export function productInquiryMessage(productName, businessName) {
   return `Hi, I'd like the best price for "${productName}"${businessName ? ` from ${businessName}` : ''}.`
 }

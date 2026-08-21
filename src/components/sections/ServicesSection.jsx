@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react'
 import { getServices } from '../../services/serviceService.js'
 import SectionHeading from '../ui/SectionHeading.jsx'
 import ServiceGrid from '../grids/ServiceGrid.jsx'
+import EnquiryModal from '../ui/EnquiryModal.jsx'
 import './ServicesSection.css'
 
 export default function ServicesSection() {
   const [services, setServices] = useState([])
+  const [activeService, setActiveService] = useState(null)
 
   useEffect(() => {
     let active = true
@@ -23,10 +25,16 @@ export default function ServicesSection() {
         <SectionHeading
           eyebrow="Services"
           title="Get things done, instantly"
-          description="Connect directly with providers over WhatsApp — no forms, no waiting."
+          description="Send an enquiry and we'll connect you with the right provider over WhatsApp."
         />
-        <ServiceGrid services={services} />
+        <ServiceGrid services={services} onEnquire={setActiveService} />
       </div>
+
+      <EnquiryModal
+        service={activeService}
+        services={services}
+        onClose={() => setActiveService(null)}
+      />
     </section>
   )
 }

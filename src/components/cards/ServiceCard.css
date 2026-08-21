@@ -1,20 +1,18 @@
 .service-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   height: 100%;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .service-card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .service-card__image {
@@ -29,7 +27,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s ease;
 }
 
 .service-card:hover .service-card__image img {
@@ -40,7 +38,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.55) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.28) 100%);
 }
 
 .service-card__body {
@@ -48,24 +46,20 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: 28px 24px 24px;
-  width: 100%;
+  flex: 1;
+  padding: 24px 22px 22px;
 }
 
 .service-card__icon {
-  position: absolute;
-  left: 20px;
-  bottom: -20px;
-  z-index: 1;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-primary);
-  color: #fff;
-  box-shadow: var(--shadow-md);
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+  margin-bottom: 10px;
   transition: transform 0.25s ease;
 }
 
@@ -82,13 +76,14 @@
 }
 
 .service-card__name {
-  font-size: 18px;
+  font-size: 17.5px;
   margin-top: 2px;
 }
 
 .service-card__desc {
-  font-size: 14px;
+  font-size: 13.5px;
   margin-top: 2px;
+  flex: 1;
 }
 
 .service-card__provider {
@@ -99,6 +94,6 @@
 }
 
 .service-card__cta {
-  margin-top: 18px;
+  margin-top: 16px;
   width: 100%;
 }

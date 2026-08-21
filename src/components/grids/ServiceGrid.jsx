@@ -2,7 +2,7 @@ import ServiceCard from '../cards/ServiceCard.jsx'
 import Reveal from '../ui/Reveal.jsx'
 import './ServiceGrid.css'
 
-export default function ServiceGrid({ services }) {
+export default function ServiceGrid({ services, onEnquire }) {
   if (!services?.length) {
     return <p className="service-grid__empty">No services available right now.</p>
   }
@@ -11,7 +11,7 @@ export default function ServiceGrid({ services }) {
     <div className="service-grid">
       {services.map((service, i) => (
         <Reveal key={service.id} delay={(i % 4) * 80}>
-          <ServiceCard service={service} />
+          <ServiceCard service={service} onEnquire={onEnquire} />
         </Reveal>
       ))}
     </div>
