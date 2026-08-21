@@ -41,7 +41,7 @@
   align-items: center;
   gap: 30px;
   flex: 1;
-  justify-content: center;
+  justify-content: start;
 }
 
 .header__nav-link {

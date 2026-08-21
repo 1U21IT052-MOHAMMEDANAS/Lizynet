@@ -1,5 +1,4 @@
 import Hero from '../components/sections/Hero.jsx'
-import EcosystemStats from '../components/sections/EcosystemStats.jsx'
 import LogoMarquee from '../components/sections/LogoMarquee.jsx'
 import BusinessesSection from '../components/sections/BusinessesSection.jsx'
 import ServicesSection from '../components/sections/ServicesSection.jsx'
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <EcosystemStats />
       <LogoMarquee />
       <BusinessesSection />
       <ServicesSection />
