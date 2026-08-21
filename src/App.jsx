@@ -10,7 +10,6 @@ import ProductPage from './pages/ProductPage.jsx'
 import ProgramPage from './pages/ProgramPage.jsx'
 import NotFound from './pages/NotFound.jsx'
 
-
 export default function App() {
   return (
     <>
