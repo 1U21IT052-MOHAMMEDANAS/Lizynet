@@ -2,17 +2,23 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import DynamicIcon from '../ui/DynamicIcon.jsx'
 import Badge from '../ui/Badge.jsx'
+import { businessLogos } from '../../data/businessLogos.js'
 import './BusinessCard.css'
 
 export default function BusinessCard({ business }) {
   const { slug, name, tagline, category, icon, description, comingSoon, accent } = business
+  const logo = businessLogos[slug]
 
   const CardInner = (
     <>
       <div className="business-card__top">
-        <div className={`business-card__icon business-card__icon--${accent}`}>
-          <DynamicIcon name={icon} size={22} strokeWidth={2} />
-        </div>
+        {logo ? (
+          <img src={logo} alt={`${name} logo`} className="business-card__logo" />
+        ) : (
+          <div className={`business-card__icon business-card__icon--${accent}`}>
+            <DynamicIcon name={icon} size={22} strokeWidth={2} />
+          </div>
+        )}
         {comingSoon ? (
           <Badge tone="soon">Coming Soon</Badge>
         ) : (

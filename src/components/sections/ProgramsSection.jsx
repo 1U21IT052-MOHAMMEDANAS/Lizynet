@@ -8,6 +8,7 @@ export default function ProgramsSection() {
   return (
     <section className="section programs-section" id="programs">
       <div className="programs-section__glow" aria-hidden="true" />
+      <div className="stars-sm" aria-hidden="true" />
       <div className="container">
         <SectionHeading
           eyebrow="Grow With Us"
