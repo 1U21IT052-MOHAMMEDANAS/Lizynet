@@ -40,11 +40,17 @@ export default function Header() {
         </Link>
 
         <nav className="header__nav">
-          {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="header__nav-link">
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith('/#') ? (
+              <a key={link.label} href={link.href} className="header__nav-link">
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.label} to={link.href} className="header__nav-link">
+                {link.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="header__actions">
@@ -68,11 +74,17 @@ export default function Header() {
 
       <div className={`header__mobile ${menuOpen ? 'header__mobile--open' : ''}`}>
         <nav className="header__mobile-nav">
-          {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="header__mobile-link">
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith('/#') ? (
+              <a key={link.label} href={link.href} className="header__mobile-link">
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.label} to={link.href} className="header__mobile-link">
+                {link.label}
+              </Link>
+            ),
+          )}
         </nav>
         <div className="header__mobile-actions">
           <Button to="/login" variant="secondary" size="md" className="header__mobile-btn">
